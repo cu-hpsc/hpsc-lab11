@@ -1,0 +1,14 @@
+#!/bin/bash
+
+#SBATCH --nodes=2
+#SBATCH --time=00:01:00
+#SBATCH --qos=testing
+#SBATCH --partition=shas-testing
+#SBATCH --ntasks=24
+#SBATCH --job-name=iotesting
+#SBATCH --output=sbatch_%j.out
+
+module purge
+module load gcc openmpi hdf5/1.8.18
+
+time mpirun -n 24 bigwrite /scratch/summit/$USER/bigfile
