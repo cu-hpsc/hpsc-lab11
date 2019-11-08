@@ -33,8 +33,8 @@ ssh scompile
 Load the older hdf5 module due the installation page's: "NOTE: Users should NOT use 1.10 releases prior to HDF5-1.10.3."
 ```module load gcc openmpi hdf5/1.8.18```
 
-You can compile using the `hdpcc` wrapper script in place of a typical compiler.  For example:
-```hdpcc bigwrite.c -o bigwrite```
+You can compile using the `h5pcc` wrapper script in place of a typical compiler.  For example:
+```h5pcc bigwrite.c -o bigwrite```
 
 -----
 
