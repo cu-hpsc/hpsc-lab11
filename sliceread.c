@@ -20,7 +20,7 @@ int main(int argc, char **argv)
   int mpi_rank;
   MPI_Comm_size(MPI_COMM_WORLD, &mpi_size);
   MPI_Comm_rank(MPI_COMM_WORLD, &mpi_rank);
-  if (ipow(TILES,DRANK) < mpi_size) {
+  if (ipow(TILES,DRANK-1) < mpi_size) {
     printf("Error: too many processes to give each a tile; increase TWIDTH\n");
     return -2;
   }
